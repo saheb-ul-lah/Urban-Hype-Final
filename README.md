@@ -39,12 +39,12 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/urbanhype.git
+   git clone https://github.com/saheb-ul-lah/Urban-Hype-Final.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd urbanhype
+   cd Urban-Hype-Final
    ```
 
 3. **Install dependencies**:
@@ -54,7 +54,7 @@ To run this project locally, follow these steps:
 
 4. **Run the development server**:
    ```bash
-   npm start
+   npm run dev
    ```
 
 5. **Open your browser** and go to `http://localhost:3000` to view the project.
