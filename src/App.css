@@ -574,7 +574,8 @@
   }
   
   .hero-card .card-content {
-    height: 300px;
+    /* Hero image card */
+    height: 700px;
   }
   
   /*-----------------------------------*\

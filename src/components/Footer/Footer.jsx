@@ -102,9 +102,9 @@ const Footer = () => {
                   required
                   className="email-field"
                 />
-                <button type="submit" className="btn btn-primary">
+                {/* <button type="submit" className="btn btn-primary">
                   Subscribe
-                </button>
+                </button> */}
               </form>
             </div>
           </div>

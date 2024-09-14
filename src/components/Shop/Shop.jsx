@@ -1,6 +1,20 @@
 import React from 'react';
 import fest1 from "../../assets/images/fest/fest1.avif";
-import fest4 from "../../assets/images/fest/fest4.avif"; // Make sure the file extension is correct
+import fest2 from "../../assets/images/fest/fest2.avif";
+import fest3 from "../../assets/images/fest/fest3.avif";
+import fest4 from "../../assets/images/fest/fest4.avif";
+import fest5 from "../../assets/images/fest/fest5.avif";
+import fest6 from "../../assets/images/fest/fest6.avif";
+
+import fashion1 from "../../assets/images/fest/fashion-1.avif";
+import fashion2 from "../../assets/images/fest/fashion-2.avif";
+import fashion3 from "../../assets/images/fest/fashion-3.avif";
+import fashion4 from "../../assets/images/fest/fashion-4.avif";
+import fashion5 from "../../assets/images/fest/fashion-5.avif";
+// import fashion6 from "../../assets/images/fest/fashion-6.avif";
+import { FaShoppingCart } from "react-icons/fa";
+import { IoMdHeart } from "react-icons/io";
+import { IoGitCompare } from "react-icons/io5";
 
 const ShopCard = ({ image, discount, price, originalPrice, title, rating, reviews }) => (
   <li className="scrollbar-item">
@@ -16,9 +30,9 @@ const ShopCard = ({ image, discount, price, originalPrice, title, rating, review
         />
         {discount && <span className="badge" aria-label={`${discount}% off`}>-{discount}%</span>}
         <div className="card-actions">
-          <button className="action-btn" aria-label="add to cart">🛍️</button>
-          <button className="action-btn" aria-label="add to wishlist">🤍</button>
-          <button className="action-btn" aria-label="compare">🔁</button>
+          <div style={{padding:"0px 0px", backgroundColor:"white"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="add to cart"><FaShoppingCart /></button></div>
+          <div style={{padding:"0px 0px", backgroundColor:"white"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="add to wishlist"><IoMdHeart /></button></div>
+          <div style={{padding:"0px 0px", backgroundColor:"white"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="compare"><IoGitCompare /></button></div>
         </div>
       </div>
       <div className="card-content">
@@ -71,13 +85,58 @@ const Shop = () => {
       title: "Desi Fusion",
       rating: 5,
       reviews: 5170
-    }
+    },
+    {
+      image: fest2, // Imported image
+      // discount: 20,
+      price: 999,
+      // originalPrice: 1999,
+      title: "Trendy Tara",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fest3, // Imported image
+      discount: 20,
+      price: 999,
+      originalPrice: 2999,
+      title: "Fusion Fashion",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fest4, // Imported image
+      discount: 20,
+      price: 999,
+      originalPrice: 2599,
+      title: "Tiny Trendsetters",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fest5, // Imported image
+      discount: 20,
+      price: 1199,
+      originalPrice: 2599,
+      title: "Vibrant Verve",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fest6, // Imported image
+      // discount: 20,
+      price: 1199,
+      // originalPrice: 1999,
+      title: "Glamour Gents",
+      rating: 5,
+      reviews: 5170
+    },
     // Add more bestseller items here
   ];
 
   const underFiveThousand = [
     {
-      image: fest4, // Imported image
+      image: fashion1, // Imported image
       discount: 20,
       price: 1499,
       originalPrice: 2499,
@@ -86,12 +145,48 @@ const Shop = () => {
       reviews: 5170
     },
     {
-      image: fest4, // Another product with same image
-      price: 1499,
-      title: "Kids Charisma",
+      image: fashion2, // Imported image
+      // discount: 20,
+      price: 2499,
+      // originalPrice: 3999,
+      title: "White Serene",
       rating: 5,
       reviews: 5170
-    }
+    },
+    {
+      image: fashion3, // Imported image
+      discount: 35,
+      price: 1199,
+      originalPrice: 1799,
+      title: "Office Vibes",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fashion4, // Imported image
+      discount: 20,
+      price: 1499,
+      originalPrice: 2499,
+      title: "Street Glamour",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fashion5, // Imported image
+      discount: 20,
+      price: 1499,
+      originalPrice: 2499,
+      title: "Timeless Swag",
+      rating: 5,
+      reviews: 5170
+    },
+    {
+      image: fest5, // Another product with same image
+      price: 1499,
+      title: "Childish Cherish",
+      rating: 5,
+      reviews: 5170
+    },
     // Add more items under 5000 here
   ];
 
