@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from '../../assets/images/logo.png';
 import logo from '../../assets/images/Our images/newlogo.png';
 import paymentMethods from '../../assets/images/pay.png';
 
@@ -24,7 +23,7 @@ const Footer = () => {
                 </p>
               </li>
               <li>
-                <p className="footer-list-text bold">+391 (0)35 2568 4593</p>
+                <p className="footer-list-text bold">+91 (0)35 2568 4593</p>
               </li>
               <li>
                 <p className="footer-list-text">support@urbanhype.com</p>

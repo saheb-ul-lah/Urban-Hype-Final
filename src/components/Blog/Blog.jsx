@@ -1,7 +1,7 @@
 import React from 'react';
-import blog1 from '../../assets/images/blog-1.jpg';
-import blog2 from '../../assets/images/blog-2.jpg';
-import blog3 from '../../assets/images/blog-3.jpg';
+import blog1 from '../../assets/images/Our images/new1.jpeg';
+import blog2 from '../../assets/images/Our images/new2.jpeg';
+import blog3 from '../../assets/images/Our images/new3.jpeg';
 import { IoArrowForwardOutline } from 'react-icons/io5';
 
 const Blog = () => {

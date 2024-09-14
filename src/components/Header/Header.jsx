@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
+import { NavLink } from 'react-router-dom'; // Import NavLink from react-router-dom
 import Logo from "../../assets/images/Our images/newlogo.png";
 import useEventListener from '../../hooks/useEventListener'; // Ensure the path is correct
+import { Link } from 'react-router-dom';
 
+import {useAuth0} from "@auth0/auth0-react";
 const Header = () => {
   const [lastScrollPos, setLastScrollPos] = useState(0);
-
+  const { loginWithRedirect} = useAuth0();
   useEffect(() => {
     // GSAP Animation
     const t1 = gsap.timeline();
@@ -15,23 +18,23 @@ const Header = () => {
       delay: 0.3,
       duration: 1,
     })
-    .from(".header-top .container .logo", {
-      y: -20,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.3,
-    })
-    .from(".header-top .container .header-actions", {
-      y: -20,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.3,
-    })
-    .from(".alert", {
-      y: -20,
-      opacity: 0,
-      duration: 0.5,
-    });
+      .from(".header-top .container .logo", {
+        y: -20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.3,
+      })
+      .from(".header-top .container .header-actions", {
+        y: -20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.3,
+      })
+      .from(".alert", {
+        y: -20,
+        opacity: 0,
+        duration: 0.5,
+      });
   }, []);
 
   // Navbar Toggle Handler
@@ -127,37 +130,45 @@ const Header = () => {
               </button>
             </div>
 
-            <a href="#" className="logo">
+            <NavLink to="/" className="logo">
               <img
                 src={Logo}
                 width="200"
                 height="30"
                 alt="UrbanHype"
               />
-            </a>
+            </NavLink>
 
             <div className="header-actions">
-              <button className="header-action-btn" aria-label="user">
+              <button onClick={() => loginWithRedirect()} className="header-action-btn" aria-label="user">
                 <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
               </button>
               <button className="header-action-btn" aria-label="favourite item">
                 <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
                 <span className="btn-badge">0</span>
               </button>
-              <button className="header-action-btn" aria-label="cart item">
-                <data className="btn-text" value="0">$0.00</data>
-                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                <span className="btn-badge">0</span>
-              </button>
+              <Link to="/cart">
+                <button className="header-action-btn" aria-label="cart item">
+                  <data className="btn-text" value="0">$0.00</data>
+                  <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                  <span className="btn-badge">0</span>
+                </button>
+              </Link>
             </div>
 
             <nav className="navbar">
               <ul className="navbar-list">
                 {['home', 'collection', 'shop', 'offer', 'blog'].map((item) => (
                   <li key={item}>
-                    <a href={`#${item}`} className="navbar-link has-after" data-nav-link>
+                    <NavLink
+                      to={item === 'home' ? '/' : `/${item}`} // Conditional routing for home
+                      className="navbar-link has-after"
+                      data-nav-link
+                      activeClassName="active"
+                      onClick={closeNavbar} // Close navbar when clicked
+                    >
                       {item.charAt(0).toUpperCase() + item.slice(1)}
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -169,14 +180,14 @@ const Header = () => {
       <div className="sidebar">
         <div className="mobile-navbar" data-navbar>
           <div className="wrapper">
-            <a href="#" className="logo">
+            <NavLink to="/" className="logo">
               <img
                 src={Logo}
                 width="179"
                 height="26"
                 alt="UrbanHype"
               />
-            </a>
+            </NavLink>
             <button
               className="nav-close-btn"
               aria-label="close menu"
@@ -189,9 +200,15 @@ const Header = () => {
           <ul className="navbar-list">
             {['home', 'collection', 'shop', 'offer', 'blog'].map((item) => (
               <li key={item}>
-                <a href={`#${item}`} className="navbar-link" data-nav-link>
+                <NavLink
+                  to={`/${item}`} // This is the route path for mobile
+                  className="navbar-link"
+                  data-nav-link
+                  onClick={closeNavbar} // Close navbar when clicked
+                >
                   {item.charAt(0).toUpperCase() + item.slice(1)}
-                </a>
+                </NavLink>
+
               </li>
             ))}
           </ul>

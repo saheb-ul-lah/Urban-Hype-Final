@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import offerBanner1 from '../../assets/images/offer-banner-1.jpg';
-import offerBanner2 from '../../assets/images/offer-banner-2.jpg';
+import offerBanner1 from '../../assets/images/fest/jacket.jpg';
+import offerBanner2 from '../../assets/images/fest/stylish.jpg';
 import gsap from 'gsap';
 import "./Offer.css"
 const Offer = () => {

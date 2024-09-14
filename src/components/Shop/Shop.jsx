@@ -30,9 +30,9 @@ const ShopCard = ({ image, discount, price, originalPrice, title, rating, review
         />
         {discount && <span className="badge" aria-label={`${discount}% off`}>-{discount}%</span>}
         <div className="card-actions">
-          <div style={{padding:"0px 0px", backgroundColor:"white"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="add to cart"><FaShoppingCart /></button></div>
-          <div style={{padding:"0px 0px", backgroundColor:"white"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="add to wishlist"><IoMdHeart /></button></div>
-          <div style={{padding:"0px 0px", backgroundColor:"white"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="compare"><IoGitCompare /></button></div>
+          <div style={{padding:"0px 0px"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="add to cart"><FaShoppingCart /></button></div>
+          <div style={{padding:"0px 0px"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="add to wishlist"><IoMdHeart /></button></div>
+          <div style={{padding:"0px 0px"}}><button style={{fontSize:"18px", width:"50px"}} className="action-btn" aria-label="compare"><IoGitCompare /></button></div>
         </div>
       </div>
       <div className="card-content">

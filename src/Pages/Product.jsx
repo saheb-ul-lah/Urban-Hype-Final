@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import "../styles/productpage.css";
-import img1 from "../shoes_images/shoe_1.jpg";
-import img2 from "../shoes_images/shoe_2.jpg";
-import img3 from "../shoes_images/shoe_3.jpg";
-import img4 from "../shoes_images/shoe_4.jpg";
+import "../assets/CSS/ProductPage.css";
+import img1 from "../assets/images/shoes_images/shoe_1.jpg";
+import img2 from "../assets/images/shoes_images/shoe_2.jpg";
+import img3 from "../assets/images/shoes_images/shoe_3.jpg";
+import img4 from "../assets/images/shoes_images/shoe_4.jpg";
 import { FaStar } from "react-icons/fa6";
 import { IoIosStarHalf } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
