@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import "../assets/CSS/ProductPage.css";
+import "../assets/CSS/productpage.css";
 import img1 from "../assets/images/shoes_images/shoe_1.jpg";
 import img2 from "../assets/images/shoes_images/shoe_2.jpg";
 import img3 from "../assets/images/shoes_images/shoe_3.jpg";
