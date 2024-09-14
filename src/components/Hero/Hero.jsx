@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 
 import Banner1 from "../../assets/images/Banner-images/1-min.png";
 import Banner2 from "../../assets/images/Banner-images/2-min.png";
-import Banner3 from "../../assets/images/Banner-images/2-min.png";
-import Banner4 from "../../assets/images/Banner-images/2-min.png";
-import Banner5 from "../../assets/images/Banner-images/2-min.png";
-import Banner6 from "../../assets/images/Banner-images/2-min.png";
-import Banner7 from "../../assets/images/Banner-images/2-min.png";
+import Banner3 from "../../assets/images/Banner-images/3-min.png";
+import Banner4 from "../../assets/images/Banner-images/4-min.png";
+import Banner5 from "../../assets/images/Banner-images/5-min.png";
+import Banner6 from "../../assets/images/Banner-images/6-min.png";
+import Banner7 from "../../assets/images/Banner-images/7-min.png";
 
 const Hero = () => {
   useEffect(() => {
