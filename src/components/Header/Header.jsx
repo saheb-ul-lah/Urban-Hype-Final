@@ -158,7 +158,7 @@ const Header = () => {
 
             <nav className="navbar">
               <ul className="navbar-list">
-                {['home', 'collection', 'shop', 'offer', 'blog'].map((item) => (
+                {['home', 'collection', 'shop', 'offer', 'blog','product'].map((item) => (
                   <li key={item}>
                     <NavLink
                       to={item === 'home' ? '/' : `/${item}`} // Conditional routing for home
@@ -198,7 +198,7 @@ const Header = () => {
             </button>
           </div>
           <ul className="navbar-list">
-            {['home', 'collection', 'shop', 'offer', 'blog'].map((item) => (
+            {['home', 'collection', 'shop', 'offer', 'blog','product'].map((item) => (
               <li key={item}>
                 <NavLink
                   to={`/${item}`} // This is the route path for mobile
